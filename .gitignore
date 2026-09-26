@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+### 本地租约状态文件（运行时生成） ###
+lease-state.json
+*.lease-state-*.tmp
