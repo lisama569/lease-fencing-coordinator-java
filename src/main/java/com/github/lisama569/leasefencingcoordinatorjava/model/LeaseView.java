@@ -11,6 +11,7 @@ public record LeaseView(
         long acquiredAtMillis,
         long expireAtMillis,
         boolean expired,
+        boolean released,
         long evaluatedAtMillis
 ) {
 }

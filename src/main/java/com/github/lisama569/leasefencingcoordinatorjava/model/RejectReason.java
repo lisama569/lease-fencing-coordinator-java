@@ -30,5 +30,14 @@ public enum RejectReason {
     UNKNOWN_FENCING_TOKEN,
 
     /** 栅栏令牌已被更新的令牌取代（更旧的一代）。 */
-    FENCING_TOKEN_SUPERSEDED
+    FENCING_TOKEN_SUPERSEDED,
+
+    /** 受保护操作的调用方不是当前令牌对应的持有者本人（令牌数字对，但人不对）。 */
+    HOLDER_IDENTITY_MISMATCH,
+
+    /** 锁已被当前持有者主动让出（release），不存在有效持有者，须重新获取领取新令牌。 */
+    LOCK_RELEASED,
+
+    /** 主动让出时调用方不是当前有效持有者（锁在他人名下或已被让出）。 */
+    NOT_CURRENT_HOLDER
 }
